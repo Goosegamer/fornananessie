@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app">
+    <div id="questionBox" class="card">
+        <h1 id="question">
+          This corner of the internet is reserved for a special person.
+          If you're not Nessie then go away.
+        </h1>
+      
+        <img id="questionImage" src="firstCat.jpeg" alt="firstCat" class="questionImage">
+      
+        <div class="buttons">
+          <button onclick="nextStep()">I am Nessie</button>
+          <button onclick="wrongPerson()">I am not Nessie</button>
+        </div>
+    </div>
+
+    <div id="wrongPersonBox" class="card hidden">
+      <h1>Who are you and how did you get this link</h1>
+      <img id="killImage" src="killCat.jpg" alt="killCat" class="questionImage">
+      <button onclick="goBack()">Oh I misclicked</button>
+    </div>
+
+    <div id="startBox" class="card hidden">
+
+        <div class="startLayout">
+    
+            <div class="startContent">
+                <h1>I had to make sure.</h1>
+    
+                <p>
+                    Now that we've confirmed it's you, you can click start.
+                    Here is a dancing cat while you prepare...
+                    for clicking the button, I guess.
+                </p>
+    
+                <button onclick="startExperience()">Start</button>
+            </div>
+    
+            <img
+                src="dancingCat.gif"
+                alt="Dancing Cat"
+                class="dancingCatImage"
+            >
+    
+        </div>
+    
+    </div>
+
+    <div id="birthdayAnimation" class="hidden">
+        <div id="fallingBehind"></div>
+        <h1 id="birthdayWord"></h1>
+        <div id="nanaScene" class="hidden">
+            <span id="na1" class="driveText">NA</span>
+            <span id="na2" class="driveText">NA</span>
+            <span id="nessieText" class="driveText">NESSIE</span>
+          </div>
+          <div id="photoBookScene" class="hidden">
+            <div id="bookClosed" onclick="openPhotoBook()">
+              <div class="bookCover">Open</div>
+            </div>
+          
+            <div id="bookOpen" class="hidden">
+                <button id="prevMediaBtn" onclick="previousBookPage(event)">&lt;</button>
+              
+                <div class="bookPage single">
+                  <div id="singleContent"></div>
+                </div>
+              
+                <button id="nextMediaBtn" onclick="nextBookPage(event)">&gt;</button>
+              </div>
+          </div>
+          
+          <div id="textScene" class="hidden" onclick="nextTextBox()">
+            <div class="textBox">
+              <p id="clickText"></p>
+            </div>
+          </div>
+
+          <div id="giftScene" class="hidden">
+            <div id="giftBox" onclick="openGift()">
+              <div class="giftLid"></div>
+              <div class="giftBody"></div>
+              <div class="giftRibbonVertical"></div>
+              <div class="giftRibbonHorizontal"></div>
+            </div>
+          
+            <div id="giftReveal" class="hidden">
+              <h1>Nintendo eShop Gift Card</h1>
+              <p>The code: [E0WQ-VPRR-T838-N8P7]</p>
+              <img src="EGift.png" alt="Nintendo eShop Gift Card">
+            </div>
+          </div>
+
+          <div id="finalCatScene" class="hidden" onclick="showFinalCat()">
+            <div class="finalCatBox">
+              <p>I hope you liked it, kinda rushed it.</p>
+              <img id="finalCatImage" src="finalCat.gif" alt="Final Cat">
+            </div>
+          </div>
+        <div id="fallingFront"></div>
+      </div>
+
+      <audio id="bgMusic" src="astronomy.mp3" preload="auto" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
